@@ -28,6 +28,15 @@ class EntryPayload(BaseModel):
     remark: str | None = None
 
 
+class BatchRetryResult(BaseModel):
+    """批量重试的整组提交结果：批次信息 + 逐台处理结果（失败项保留）。"""
+
+    ok: bool
+    message: str
+    batch: dict[str, Any] | None = None
+    results: list[dict[str, Any]] = Field(default_factory=list)
+
+
 
 class ClusterEntry(BaseModel):
     """集群节点明细结构。"""

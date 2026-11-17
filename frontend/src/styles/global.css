@@ -33,3 +33,31 @@ body { margin: 0; background: #f6f8fb; color: #1f2937; }
 .link { border: none; background: none; color: var(--brand); cursor: pointer; padding: 0; }
 .page-foot { display: flex; justify-content: space-between; margin-top: 8px; font-size: 12px; color: var(--muted); }
 .error-text { color: #b42318; }
+.notice-text { color: #067647; }
+.batch-bar { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; margin-bottom: 12px; font-size: 13px; }
+.strategy-item { display: flex; gap: 4px; align-items: center; }
+.hint { color: var(--muted); font-size: 12px; }
+.result-panel { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; margin-bottom: 12px; font-size: 13px; }
+.result-panel ul { margin: 6px 0 0; padding-left: 18px; }
+.result-ok { color: #067647; }
+.result-fail { color: #b42318; }
+.status-tag { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 12px; background: #eef2f7; }
+.status-tag[data-status="执行失败"] { background: #fee4e2; color: #b42318; }
+.status-tag[data-status="执行中"] { background: #e0eaff; color: #1f6feb; }
+.status-tag[data-status="执行成功"], .status-tag[data-status="已完成"] { background: #dcfae6; color: #067647; }
+.panel { margin-top: 16px; margin-bottom: 16px; }
+.panel-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; gap: 12px; }
+.panel-head h3 { margin: 0; font-size: 15px; }
+.panel-actions { display: flex; gap: 10px; align-items: center; }
+.batch-detail { background: #f8fafc; }
+.sub-table { margin: 8px 0; }
+.late-list { font-size: 12px; color: #b42318; }
+.late-list ul { margin: 4px 0 0; padding-left: 18px; }
+.drawer-mask { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.35); display: flex; justify-content: flex-end; z-index: 20; }
+.drawer { width: 380px; background: #fff; height: 100%; padding: 16px; overflow: auto; }
+.drawer-head { display: flex; justify-content: space-between; align-items: center; }
+.drawer-head h3 { margin: 0; font-size: 15px; }
+.detail-list { display: grid; grid-template-columns: 96px 1fr; gap: 6px 12px; font-size: 13px; }
+.detail-list dt { color: var(--muted); }
+.detail-list dd { margin: 0; word-break: break-all; }
+.filter-item select { padding: 4px 6px; border: 1px solid var(--border); border-radius: 6px; }

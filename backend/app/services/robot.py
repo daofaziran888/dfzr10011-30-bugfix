@@ -43,6 +43,8 @@ class RobotService:
         entry["status"] = STATUS_ORDER[0]
         entry["pending"] = True
         entry["abnormal"] = False
+        entry["失败步骤"] = values.get("失败步骤") or "—"
+        entry["版本号"] = 1
         rows.append(entry)
         return entry, []
 
@@ -58,4 +60,5 @@ class RobotService:
         entry["status"] = target
         entry["pending"] = target != STATUS_ORDER[-1]
         entry["abnormal"] = action in NEGATIVE_ACTIONS
+        entry["版本号"] = int(entry.get("版本号") or 0) + 1
         return entry, f"执行记录已{action}"
